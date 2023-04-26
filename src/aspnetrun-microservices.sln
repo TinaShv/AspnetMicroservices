@@ -15,11 +15,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basket", "Basket", "{BE9607
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Basket.API", "Services\Basket\Basket.API\Basket.API.csproj", "{BBF7ADB0-403D-400B-90A4-EE7743C2EFC3}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Entities", "Entities", "{BC50399B-FD72-459E-8BB7-33752AA838E0}"
-	ProjectSection(SolutionItems) = preProject
-		Class2.cs = Class2.cs
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,7 +42,6 @@ Global
 		{EA4E54DB-F56C-4A9B-9D03-189BF8693895} = {A79E42A3-445B-41C4-A6D1-1BF6CA17DFD7}
 		{BE9607B1-A206-4AFF-8110-873B2F5B6E93} = {862095FC-CEB3-4A63-ADBF-828814D72951}
 		{BBF7ADB0-403D-400B-90A4-EE7743C2EFC3} = {BE9607B1-A206-4AFF-8110-873B2F5B6E93}
-		{BC50399B-FD72-459E-8BB7-33752AA838E0} = {BE9607B1-A206-4AFF-8110-873B2F5B6E93}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B1E5BCFC-E5A4-4D92-8403-3961A9A04CDE}
