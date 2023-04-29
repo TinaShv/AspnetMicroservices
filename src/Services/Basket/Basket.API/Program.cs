@@ -1,3 +1,4 @@
+using Basket.API.Repositories;
 using Microsoft.OpenApi.Models;
 using System.Configuration;
 
@@ -7,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddStackExchangeRedisCache(option =>
 {
     IConfiguration configuration = null;
-    option.Configuration = ConfigurationBinder.GetValue<string>(configuration,"CacheSettings:ConnectionString");
+    option.Configuration = ConfigurationBinder.GetValue<string>(configuration, "CacheSettings:ConnectionString");
     //option.Configuration = configuration.GetValue<string>("CacheSettings:ConnectionString");
 });
 
@@ -18,6 +19,8 @@ builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "Basket.API", Version = "v1" });
 });
+// Add a custom scoped service.
+builder.Services.AddScoped<IBasketRepository, BasketRepository>();
 
 var app = builder.Build();
 
