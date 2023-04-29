@@ -4,13 +4,13 @@ using System.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
-//builder.Services.AddStackExchangeRedisCache(option => { option.Configuration = "localhost:6379"; });
-builder.Services.AddStackExchangeRedisCache(option =>
-{
-    IConfiguration configuration = null;
-    option.Configuration = ConfigurationBinder.GetValue<string>(configuration, "CacheSettings:ConnectionString");
-    //option.Configuration = configuration.GetValue<string>("CacheSettings:ConnectionString");
-});
+builder.Services.AddStackExchangeRedisCache(option => { option.Configuration = "localhost:6379"; });
+//builder.Services.AddStackExchangeRedisCache(option =>
+//{
+//    IConfiguration configuration = null;
+//    option.Configuration = ConfigurationBinder.GetValue<string>(configuration, "CacheSettings:ConnectionString");
+//    //option.Configuration = configuration.GetValue<string>("CacheSettings:ConnectionString");
+//});
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
